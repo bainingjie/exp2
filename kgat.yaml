@@ -17,14 +17,14 @@ load_col:
 val_interval:
     rating: "[3,inf)"
 
-# 11/30 有的数据集的user 和item 特别多，所以需要在kgat.yaml 中加入如下两行配置信息: 
+# 11/30 有的数据集的user 和item 特别多，所以需要在kgat.yaml 中加入如下两行配置信息:  
 user_inter_num_interval: "[15,inf)" 
 item_inter_num_interval: "[15,inf)"
 
 # training and evaluation
 epochs: 500
-train_batch_size: 4096
-eval_batch_size: 102400
+train_batch_size: 4096   # 11/30, 4096->1024
+eval_batch_size: 102400 # 11/30, 102400->1024
 valid_metric: MRR@10
 stopping_step: 50 # 11/30, 1000->50
 
